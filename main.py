@@ -7,7 +7,7 @@ init(autoreset=True)
 while True:
     # Crear marco decorativo superior
     print(Fore.CYAN + '+' + '=' * 48 + '+')
-    print(Fore.CYAN + '|' + 'BIENVENIDO AL MENÚ'.center(48) + '|') 
+    print(Fore.CYAN + '|' + 'BIENVENIDO AL MENÚ'.center(48) + '|')
     print(Fore.CYAN + '+' + '=' * 48 + '+')
 
     # Opciones del menú
