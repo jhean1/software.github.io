@@ -12,7 +12,7 @@ while True:
 
     # Opciones del menú
     print(Fore.YELLOW + '|' + "Seleccione la opción que desea realizar:".center(48) + '|')
-    print(Fore.GREEN + '|' + "1. Agregar".center(48) + '|')
+    print(Fore.GREEN + '|' + "1. Ingresar Mercancía".center(48) + '|')
     print(Fore.BLUE + '|' + "2. Modificar".center(48) + '|')
     print(Fore.RED + '|' + "3. Eliminar".center(48) + '|')
     print(Fore.MAGENTA + '|' + "4. Mostrar".center(48) + '|')
