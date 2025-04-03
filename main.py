@@ -1,8 +1,8 @@
 while True:
-    print('MENU' .center(50, '='))
+    print('BIENVENIDO AL MENU' .center(50, '='))
     import time
 
-    print("Bienvenido al menu")
+    
     time.sleep(1)
     print("seleccione la opción que desea realizar")
     print("1. Agregar")
@@ -23,6 +23,7 @@ while True:
     else:
         print("saliste del programa")
         exit()
+    print('' .center(50, '='))
 
 
 
