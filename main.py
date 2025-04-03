@@ -41,4 +41,3 @@ while True:
         print(Fore.RED + "Opción no válida, intenta de nuevo.".center(50))
     
     print(Style.DIM + '=' * 50)  # Línea decorativa para separar iteraciones
-
