@@ -1,3 +1,4 @@
+
 import time
 
 print("Bienvenido al menu")
@@ -9,7 +10,6 @@ print("3. Eliminar")
 print("4. Mostrar")
 print("5. salir del programa")
 x=int(input(""))
-
 
 
 
