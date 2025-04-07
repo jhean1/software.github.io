@@ -11,12 +11,12 @@ while True:
     print(Fore.CYAN + '+' + '=' * 48 + '+')
 
     # Opciones del menú
-    print(Fore.YELLOW + '|' + "Seleccione la opción que desea realizar:".ljust(47) + '|')
-    print(Fore.GREEN + '|' + "1. Ingreso de mercancia".ljust(47) + '|')
-    print(Fore.BLUE + '|' + "2. Ingreso de clientes".ljust(47) + '|')
-    print(Fore.RED + '|' + "3. Ingreso de ventas".ljust(47) + '|')
-    print(Fore.MAGENTA + '|' + "4. Historial de inventario".ljust(47) + '|')
-    print(Fore.WHITE + '|' + "5. Salir del programa".ljust(47) + '|')
+    print(Fore.YELLOW + '|' + "Seleccione la opción que desea realizar:".center(46) + '|')
+    print(Fore.GREEN + '|' + "1. Ingreso de mercancia".center(46) + '|')
+    print(Fore.BLUE + '|' + "2. Ingreso de clientes".center(46) + '|')
+    print(Fore.RED + '|' + "3. Ingreso de ventas".center(46) + '|')
+    print(Fore.MAGENTA + '|' + "4. Historial de inventario".center(46) + '|')
+    print(Fore.WHITE + '|' + "5. Salir del programa".center(46) + '|')
     print(Fore.CYAN + '+' + '=' * 48 + '+')  # Línea decorativa inferior
 
     try:
