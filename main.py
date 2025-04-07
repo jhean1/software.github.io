@@ -7,16 +7,16 @@ init(autoreset=True)
 while True:
     # Crear marco decorativo superior
     print(Fore.CYAN + '+' + '=' * 48 + '+')
-    print(Fore.CYAN + '|' + 'Desarrollo de software en python para la gestión de invetario en la empresa calzado'.center(48) + '|')
+    print(Fore.CYAN + '|' + 'Desarrollo de software en python para la gestión de inventario en la empresa calzado'.center(48) + '|')
     print(Fore.CYAN + '+' + '=' * 48 + '+')
 
     # Opciones del menú
-    print(Fore.YELLOW + '|' + "Seleccione la opción que desea realizar:".center(48) + '|')
-    print(Fore.GREEN + '|' + "1. Ingreso de mercancia".center(48) + '|')
-    print(Fore.BLUE + '|' + "2. Ingreso de clientes".center(48) + '|')
-    print(Fore.RED + '|' + "3. Ingreso de ventas".center(48) + '|')
-    print(Fore.MAGENTA + '|' + "4. Historial de inventario".center(48) + '|')
-    print(Fore.WHITE + '|' + "5. Salir del programa".center(48) + '|')
+    print(Fore.YELLOW + '|' + "Seleccione la opción que desea realizar:".ljust(47) + '|')
+    print(Fore.GREEN + '|' + "1. Ingreso de mercancia".ljust(47) + '|')
+    print(Fore.BLUE + '|' + "2. Ingreso de clientes".ljust(47) + '|')
+    print(Fore.RED + '|' + "3. Ingreso de ventas".ljust(47) + '|')
+    print(Fore.MAGENTA + '|' + "4. Historial de inventario".ljust(47) + '|')
+    print(Fore.WHITE + '|' + "5. Salir del programa".ljust(47) + '|')
     print(Fore.CYAN + '+' + '=' * 48 + '+')  # Línea decorativa inferior
 
     try:
@@ -33,7 +33,7 @@ while True:
     elif x == 3:
         print(Fore.RED + "Seleccionaste ingreso de ventas".center(50))
     elif x == 4:
-        print(Fore.MAGENTA + "Seleccionaste  historial de inventario".center(50))
+        print(Fore.MAGENTA + "Seleccionaste historial de inventario".center(50))
     elif x == 5:
         print(Fore.WHITE + "Saliste del programa".center(50))
         exit()
