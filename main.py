@@ -7,8 +7,7 @@ init(autoreset=True)
 
 while True:
     # Limpiar la pantalla
-    os.system('cls')  # En Windows, usa 'cls'. En Linux/Mac, sería 'clear'.
-
+    os.system('cls')  
     # Crear marco decorativo superior
     print(Fore.CYAN + '+' + '=' * 80 + '+')
     print(Fore.CYAN + '|' + 'Desarrollo de software en python para la gestión de'.center(78) + '|')
@@ -28,7 +27,7 @@ while True:
         # Solicitar opción al usuario
         x = int(input(Fore.CYAN + "Ingrese su opción: ".center(80)))
     except ValueError:
-        # Mensaje de error si no se ingresa un número válido
+        
         print(Fore.RED + "Por favor, ingrese un número válido.".center(80))
         time.sleep(2)
         continue
