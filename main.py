@@ -16,9 +16,9 @@ while True:
 
     # Opciones del menú
     print(Fore.YELLOW + '|' + "Seleccione la opción que desea realizar:".center(78) + '|')
-    print(Fore.GREEN + '|' + "1. Ingreso de mercancia".center(78) + '|')
-    print(Fore.BLUE + '|' + "2. Ingreso de clientes".center(78) + '|')
-    print(Fore.RED + '|' + "3. Ingreso de ventas".center(78) + '|')
+    print(Fore.GREEN + '|' + "1. Registro de producción".center(78) + '|')
+    print(Fore.BLUE + '|' + "2. Registro de cliente".center(78) + '|')
+    print(Fore.RED + '|' + "3. Transsacciónes".center(78) + '|')
     print(Fore.MAGENTA + '|' + "4. Historial de inventario".center(78) + '|')
     print(Fore.WHITE + '|' + "5. Salir del programa".center(78) + '|')
     print(Fore.CYAN + '+' + '=' * 80 + '+')
@@ -34,13 +34,13 @@ while True:
 
     # Respuesta según la opción seleccionada
     if x == 1:
-        print(Fore.GREEN + "Seleccionaste ingreso de mercancia".center(80))
+        print(Fore.GREEN + "Seleccionaste registro de producción".center(80))
         time.sleep(2)
     elif x == 2:
-        print(Fore.BLUE + "Seleccionaste ingreso de clientes".center(80))
+        print(Fore.BLUE + "Seleccionaste registro de clientes".center(80))
         time.sleep(2)
     elif x == 3:
-        print(Fore.RED + "Seleccionaste ingreso de ventas".center(80))
+        print(Fore.RED + "Seleccionaste transsacciónes".center(80))
         time.sleep(2)
     elif x == 4:
         print(Fore.MAGENTA + "Seleccionaste historial de inventario".center(80))
