@@ -64,7 +64,7 @@ while True:
         })
 
         print(Fore.GREEN + f"Saldo final calculado: {saldo_final}".center(80))
-        time.sleep(2)
+        time.sleep(5)
 
     elif x == 2:
         # Submenú para Registro de Cliente
@@ -84,7 +84,7 @@ while True:
         })
 
         print(Fore.BLUE + f"Cliente registrado: {nombre_completo} (ID: {cliente_id})".center(80))
-        time.sleep(2)
+        time.sleep(5)
 
     elif x == 3:
         # Submenú para Transacciones
@@ -109,7 +109,7 @@ while True:
             })
 
             print(Fore.GREEN + "Compra registrada correctamente.".center(80))
-            time.sleep(2)
+            time.sleep(5)
 
         elif opcion_transaccion == 2:
             # Venta
@@ -130,7 +130,7 @@ while True:
             })
 
             print(Fore.GREEN + "Venta registrada correctamente.".center(80))
-            time.sleep(2)
+            time.sleep(5)
 
     elif x == 4:
         # Historial de Inventario
@@ -138,7 +138,7 @@ while True:
         print(Fore.MAGENTA + "Historial de Inventario".center(80))
         for item in historial:
             print(Fore.WHITE + str(item).center(80))
-        time.sleep(2)
+        time.sleep(5)
 
     elif x == 5:
         print(Fore.WHITE + "Saliste del programa".center(80))
