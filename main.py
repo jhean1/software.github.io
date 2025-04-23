@@ -5,9 +5,14 @@ import time
 # Inicializar colorama
 init(autoreset=True)
 
+# Variables para almacenar datos
+inventario = []
+clientes = []
+historial = []
+
 while True:
     # Limpiar la pantalla
-    os.system('cls')  
+    os.system('cls')
 
     # Crear marco decorativo superior
     print(Fore.CYAN + '+' + '=' * 80 + '+')
@@ -39,6 +44,7 @@ while True:
         print(Fore.GREEN + "Registro de Producción".center(80))
         referencia = input(Fore.CYAN + "Ingrese la referencia: ".center(80))
         talla = input(Fore.CYAN + "Ingrese la talla: ".center(80))
+        descripcion = input(Fore.CYAN + "Ingrese la descripción: ".center(80))
         costo_produccion = float(input(Fore.CYAN + "Ingrese el costo de producción: ".center(80)))
         porcentaje_utilidad = float(input(Fore.CYAN + "Ingrese el porcentaje de utilidad: ".center(80)))
         precio_venta = float(input(Fore.CYAN + "Ingrese el precio de venta: ".center(80)))
@@ -46,6 +52,16 @@ while True:
         entrada = int(input(Fore.CYAN + "Ingrese las entradas: ".center(80)))
         salida = int(input(Fore.CYAN + "Ingrese las salidas: ".center(80)))
         saldo_final = saldo_inicial + entrada - salida
+
+        # Guardar en inventario
+        inventario.append({
+            "referencia": referencia,
+            "talla": talla,
+            "descripcion": descripcion,
+            "costo_produccion": costo_produccion,
+            "precio_venta": precio_venta,
+            "saldo_final": saldo_final
+        })
 
         print(Fore.GREEN + f"Saldo final calculado: {saldo_final}".center(80))
         time.sleep(2)
@@ -59,15 +75,69 @@ while True:
         telefono = input(Fore.CYAN + "Ingrese el teléfono: ".center(80))
         valor_comprado = float(input(Fore.CYAN + "Ingrese el valor comprado: ".center(80)))
 
+        # Guardar en clientes
+        clientes.append({
+            "id": cliente_id,
+            "nombre": nombre_completo,
+            "telefono": telefono,
+            "valor_comprado": valor_comprado
+        })
+
         print(Fore.BLUE + f"Cliente registrado: {nombre_completo} (ID: {cliente_id})".center(80))
         time.sleep(2)
 
     elif x == 3:
-        print(Fore.RED + "Seleccionaste transacciones".center(80))
-        time.sleep(2)
+        # Submenú para Transacciones
+        os.system('cls')
+        print(Fore.RED + "Transacciones".center(80))
+        print(Fore.YELLOW + "1. Compra".center(80))
+        print(Fore.YELLOW + "2. Venta".center(80))
+        opcion_transaccion = int(input(Fore.CYAN + "Seleccione una opción: ".center(80)))
+
+        if opcion_transaccion == 1:
+            # Compra
+            referencia = input(Fore.CYAN + "Ingrese la referencia: ".center(80))
+            talla = input(Fore.CYAN + "Ingrese la talla: ".center(80))
+            cantidad = int(input(Fore.CYAN + "Ingrese la cantidad: ".center(80)))
+
+            # Guardar en historial
+            historial.append({
+                "tipo": "compra",
+                "referencia": referencia,
+                "talla": talla,
+                "cantidad": cantidad
+            })
+
+            print(Fore.GREEN + "Compra registrada correctamente.".center(80))
+            time.sleep(2)
+
+        elif opcion_transaccion == 2:
+            # Venta
+            cliente_id = input(Fore.CYAN + "Ingrese el ID del cliente: ".center(80))
+            referencia = input(Fore.CYAN + "Ingrese la referencia: ".center(80))
+            talla = input(Fore.CYAN + "Ingrese la talla: ".center(80))
+            unidades = int(input(Fore.CYAN + "Ingrese el número de unidades: ".center(80)))
+            valor_a_pagar = float(input(Fore.CYAN + "Ingrese el valor a pagar: ".center(80)))
+
+            # Guardar en historial
+            historial.append({
+                "tipo": "venta",
+                "cliente_id": cliente_id,
+                "referencia": referencia,
+                "talla": talla,
+                "unidades": unidades,
+                "valor_a_pagar": valor_a_pagar
+            })
+
+            print(Fore.GREEN + "Venta registrada correctamente.".center(80))
+            time.sleep(2)
 
     elif x == 4:
-        print(Fore.MAGENTA + "Seleccionaste historial de inventario".center(80))
+        # Historial de Inventario
+        os.system('cls')
+        print(Fore.MAGENTA + "Historial de Inventario".center(80))
+        for item in historial:
+            print(Fore.WHITE + str(item).center(80))
         time.sleep(2)
 
     elif x == 5:
