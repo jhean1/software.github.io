@@ -63,6 +63,17 @@ while True:
             "saldo_final": saldo_final
         })
 
+        # Guardar en historial
+        historial.append({
+            "tipo": "producción",
+            "referencia": referencia,
+            "talla": talla,
+            "descripcion": descripcion,
+            "costo_produccion": costo_produccion,
+            "precio_venta": precio_venta,
+            "saldo_final": saldo_final
+        })
+
         print(Fore.GREEN + f"Saldo final calculado: {saldo_final}".center(80))
         time.sleep(5)
 
@@ -77,6 +88,15 @@ while True:
 
         # Guardar en clientes
         clientes.append({
+            "id": cliente_id,
+            "nombre": nombre_completo,
+            "telefono": telefono,
+            "valor_comprado": valor_comprado
+        })
+
+        # Guardar en historial
+        historial.append({
+            "tipo": "cliente",
             "id": cliente_id,
             "nombre": nombre_completo,
             "telefono": telefono,
