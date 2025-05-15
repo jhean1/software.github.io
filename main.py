@@ -10,6 +10,8 @@ init(autoreset=True)
 inventario = []
 clientes = []
 historial = []
+
+# Arte para menú proyecto
 arte_ascii = """
 
  
